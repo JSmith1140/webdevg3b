@@ -1,6 +1,6 @@
 # webdevg3b
 
-Requirments:
+# Requirements:
 - You must use tailwind CSS framework
 - You must follow the design principles for responsive design
 - You should put all custom css into styles/styles.css file and all JavaScript scripts into scripts/scripts.js file. In your HTML file, you are not allowed to use thing such as style="color: red; font-size: 100%;"
