@@ -9,6 +9,7 @@
 - Make the website accessible by providing a toggle switch for dark/light mode and a way to change the font size
 
 Idea: Bottled Air to sell (mountain, ocean, forest, etc.)
+More Pages: Home, NavBar/Footer, Shop Page etc.
 Split:
 Kaden - About us, 
 Emily - 
