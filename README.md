@@ -13,7 +13,7 @@ More Pages: Home, NavBar/Footer, Shop Page etc.
 Idea: Bottled Flavored Water Company
 Split:
 Kaden - About us, 
-Emily - 
-Jacob - 
-Michael - 
+Emily - NavBar/Footer
+Jacob - Shop Page
+Michael - Home Page
 https://www.tailawesome.com/resources/eureka/demo
