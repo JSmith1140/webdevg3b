@@ -10,10 +10,9 @@
 
 More Pages: Home, NavBar/Footer, Shop Page etc.
 
-Idea: Bottled Flavored Water Company
+Idea: Bottled Air to sell (mountain, ocean, forest, etc.)
 Split:
 Kaden - About us, 
-Emily - NavBar/Footer
-Jacob - Shop Page
-Michael - Home Page
-https://www.tailawesome.com/resources/eureka/demo
+Emily - 
+Jacob - 
+Michael - Home
