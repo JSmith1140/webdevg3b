@@ -11,9 +11,9 @@
 
 More Pages: Home, NavBar/Footer, Shop Page etc.
 
-Idea: Bottled Air to sell (mountain, ocean, forest, etc.)
+Idea: Bottled Flavored Water Company
 Split:
 Kaden - About us,
 Emily - NavBar/Footer
-Jacob -
+Jacob - Shop Page
 Michael - Home
