@@ -1,0 +1,55 @@
+/* styles/styles.css - custom styles for the Flavored Watr About page */
+
+/* Handwriting/cursive font for headings (fall-back provided) */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.font-handwriting {
+  font-family: 'Great Vibes', cursive;
+}
+
+/* Small typography and color adjustments */
+.prose {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.03rem;
+}
+
+/* Make the main cursive heading class available (used in HTML via 'font-handwriting') */
+.text-emerald-700 {
+  --tw-text-opacity: 1;
+  color: rgba(4, 120, 87, var(--tw-text-opacity)); /* slightly adjusted emerald */
+}
+
+/* Ensure the team initials squares remain visually consistent */
+.w-20.h-20 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+  border-radius: 0.5rem;
+}
+
+/* Improve contrast for the hero tagline */
+.hero-sub {
+  font-size: 1.05rem;
+  color: #374151;
+}
+
+/* Make images responsive (group photo) */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Accessibility helpers */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
