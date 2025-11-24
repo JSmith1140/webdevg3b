@@ -1,5 +1,7 @@
 # webdevg3b
 
+https://webdevg3b.vercel.app/
+
 # Requirements:
 
 - You must use tailwind CSS framework
