@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
       sizeIndicator.textContent = currentWidth + 'px wide';
     }
     if (resetSizeBtn) {
-      resetSizeBtn.style.display = currentWidth !== baseWidth ? 'inline-flex' : 'none';
+      resetSizeBtn.classList.toggle('hidden', currentWidth === baseWidth);
     }
     if (sizeIncreaseBtn) {
       sizeIncreaseBtn.disabled = currentWidth >= maxWidth;

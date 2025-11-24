@@ -18,6 +18,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" as="style" onload="this.onload=null,this.rel='stylesheet'">
+        <link rel="stylesheet" href="styles/styles.css">
         <link rel="icon" type="image/png" sizes="32x32" href="https://www.wangchucheng.com/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_32x32_fill_box_center_3.png">
         <link rel="apple-touch-icon" sizes="180x180" href="https://www.wangchucheng.com/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_3.png">
         <link rel="alternate" type="application/rss+xml" href="https://www.wangchucheng.com/en/docs/hugo-eureka/index.xml" title="WANG Chucheng">
@@ -90,35 +91,44 @@
                                 <div class=flex>
                                     <div class="w-full lg:w-3/4 px-6">
                                         <article class=prose>
-                                            <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; margin-bottom:32px; width:100%; background:linear-gradient(135deg,#f8fafc 0%,#e0e7ff 100%); border-radius:32px; box-shadow:0 4px 24px rgba(0,0,0,0.08); padding:32px 0;">
-                                                <h1 style="font-size:3vw; font-weight:900; letter-spacing:2px; margin-bottom:16px; max-width:1200px; width:90vw; text-align:center;">FLAVOURED WATR</h1>
-                                                <div style="background: linear-gradient(135deg, #840202 0%, #0b0174 100%); border-radius:32px; padding:32px 0 8px 0; margin-bottom:8px; box-shadow:0 4px 24px rgba(0,0,0,0.08); display:flex; justify-content:center; align-items:center;">
-                                                        <img id="zoomable-image" src="assets/FlavourWatrInc.png" alt="Flavoured Water Inc. Logo" style="max-width:600px; width:95vw; height:auto; display:block; background:transparent; cursor:zoom-in; border-radius:24px; box-shadow:0 2px 16px rgba(0,0,0,0.12);" />
+                                            <div class="hero-card">
+                                                <h1 class="hero-title">FLAVOURED WATR</h1>
+                                                <div class="hero-controls">
+                                                    <button id="increase-size-btn" class="btn-primary">Make this bigger</button>
+                                                    <button id="reset-size-btn" class="btn-secondary hidden">Reset size</button>
+                                                    <span id="size-indicator" class="size-indicator">600px wide</span>
                                                 </div>
-                                                    <div id="image-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.85); z-index:9999; justify-content:center; align-items:center;">
-                                                        <div style="position:relative; display:flex; flex-direction:column; align-items:center;">
-                                                            <img id="modal-img" src="assets/FlavourWatrInc.png" alt="Flavoured Water Inc. Logo" style="max-width:90vw; max-height:90vh; border-radius:32px; box-shadow:0 8px 40px rgba(0,0,0,0.25); background:#fff;" />
-                                                            <button id="close-modal-btn" style="position:absolute; top:16px; right:16px; font-size:2.5rem; background:#fff; color:#222; border:none; border-radius:50%; width:48px; height:48px; cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,0.15);">&times;</button>
+                                                <div class="hero-image-shell">
+                                                        <img id="zoomable-image" src="assets/FlavourWatrInc.png" alt="Flavoured Water Inc. Logo" data-base-width="600" data-max-width="1200" data-step="120" class="hero-logo" />
+                                                </div>
+                                                    <div id="zoom-modal" class="zoom-modal">
+                                                        <div class="zoom-modal__content">
+                                                            <img id="zoom-modal-img" src="assets/FlavourWatrInc.png" alt="Flavoured Water Inc. Logo" class="zoom-modal__img" />
+                                                            <div class="zoom-modal__controls">
+                                                                <button id="zoom-in-btn" class="zoom-btn">+</button>
+                                                                <button id="zoom-out-btn" class="zoom-btn">−</button>
+                                                                <button id="zoom-reset-btn" class="zoom-btn zoom-btn--reset">Reset</button>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                <h2 style="font-size:1.3vw; font-weight:200; margin-bottom:10px; max-width:600px; width:90vw; text-align:center;">A feature-rich and highly customizable water</h2>
+                                                <h2 class="hero-tagline">A feature-rich and highly customizable water</h2>
                                             </div>
-                                            <h2 id=try-Flavoured-Water style="text-align: center; font-size:3rem; font-weight:900; margin:32px 0 24px 0; letter-spacing:1px;">Try Flavoured Water</h2>
-                                            <ul style=" font-size:2rem; font-weight:500; text-align:left; margin:32px 0; line-height:1.6; max-width:900px; list-style:disc inside;">
+                                            <h2 id=try-Flavoured-Water class="section-title">Try Flavoured Water</h2>
+                                            <ul class="section-list">
                                                 <li>Flavoured Water is a feature-rich, highly customizable beverage designed for every taste.</li>
                                                 <li>Choose from a variety of natural flavors and create your own perfect blend.</li>
                                                 <li>Our water is crafted for health, hydration, and refreshment—no artificial additives.</li>
                                                 <li>Explore our Getting Started guide to discover your favorite combinations and recipes.</li>
                                                 <li>Join our community, share your custom blends, and help us improve Flavoured Water for everyone!</li>
                                             </ul>
-                                            <h2 id=view-document class="text-center" style="font-size:3rem; font-weight:900; margin:40px 0 32px 0; letter-spacing:2px;">View Document</h2>
-                                            <ul style="font-size:2rem; line-height:1.5;">
-                                                <li style="margin-bottom:18px;"><strong>Getting Started:</strong> In Getting Started you will learn how to quickly enjoy Flavoured Water and explore its features.</li>
-                                                <li style="margin-bottom:18px;"><strong>Homepage Configuration:</strong> After Getting Started, learn how to customize your Flavoured Water experience and personalize your homepage.</li>
-                                                <li style="margin-bottom:18px;"><strong>Content Management:</strong> Once your homepage is set up, discover how to manage your favorite blends and organize your water choices.</li>
-                                                <li style="margin-bottom:18px;"><strong>Customize Flavoured Water:</strong> After mastering content management, explore customization options to tailor Flavoured Water to your taste and preferences.</li>
-                                                <li style="margin-bottom:18px;"><strong>Multilingual Mode:</strong> In addition to content management and customization, Flavoured Water supports multiple languages. Learn how to enjoy Flavoured Water in your preferred language.</li>
-                                                <li style="margin-bottom:18px;"><strong>Update Flavoured Water:</strong> Discover different ways to update your Flavoured Water experience, including new flavors, seasonal blends, and feature improvements.</li>
+                                            <h2 id=view-document class="section-title text-center">View Document</h2>
+                                            <ul class="section-list section-list--dense">
+                                                <li><strong>Getting Started:</strong> In Getting Started you will learn how to quickly enjoy Flavoured Water and explore its features.</li>
+                                                <li><strong>Homepage Configuration:</strong> After Getting Started, learn how to customize your Flavoured Water experience and personalize your homepage.</li>
+                                                <li><strong>Content Management:</strong> Once your homepage is set up, discover how to manage your favorite blends and organize your water choices.</li>
+                                                <li><strong>Customize Flavoured Water:</strong> After mastering content management, explore customization options to tailor Flavoured Water to your taste and preferences.</li>
+                                                <li><strong>Multilingual Mode:</strong> In addition to content management and customization, Flavoured Water supports multiple languages. Learn how to enjoy Flavoured Water in your preferred language.</li>
+                                                <li><strong>Update Flavoured Water:</strong> Discover different ways to update your Flavoured Water experience, including new flavors, seasonal blends, and feature improvements.</li>
                                             </ul>
                                         <div class="flex md:justify-end my-4">
                                             <a href=https://github.com/wangchucheng/hugo-eureka-docs/blob/master/en/_index.md title="Edit this page">
@@ -147,28 +157,6 @@
             </div>
         </footer>
         <script defer src="scripts/scripts.js"></script>
-                <script>
-                // Modal enlarge feature for Flavoured Watr image
-                document.addEventListener('DOMContentLoaded', function() {
-                    var zoomableImage = document.getElementById('zoomable-image');
-                    var modal = document.getElementById('image-modal');
-                    var closeBtn = document.getElementById('close-modal-btn');
-                    if (zoomableImage && modal && closeBtn) {
-                        zoomableImage.addEventListener('click', function() {
-                            modal.style.display = 'flex';
-                        });
-                        closeBtn.addEventListener('click', function() {
-                            modal.style.display = 'none';
-                        });
-                        modal.addEventListener('click', function(e) {
-                            if (e.target === modal) {
-                                modal.style.display = 'none';
-                            }
-                        });
-                    }
-                });
-                </script>
         <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"062c7455e19646539b95e8d6a893da94","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
     </body>
-        <script src="scripts/scripts.js"></script>
 </html>
