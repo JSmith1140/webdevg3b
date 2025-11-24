@@ -54,9 +54,9 @@
     </head>
     <body class="flex min-h-screen flex-col">
         <header class="min-h-8 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm">
-            <div style="text-align:center; margin-top:8px;">
+            <!-- <div style="text-align:center; margin-top:8px;">
                 <img src="assets/Logo.png" alt="Flavoured Water Inc. Logo" style="max-width:80px; width:100%; height:auto;" />
-            </div>
+            </div> -->
             <div class="mx-auto w-full max-w-screen-xl">
                 <script>
                     let storageColorScheme = localStorage.getItem("lightDarkMode");
@@ -134,6 +134,9 @@
                                         <i class='fas fa-caret-right ms-1'></i>
                                     </div>
                                     <div id=sidebar-toc class="hidden md:block overflow-y-auto mx-6 md:mx-0 pe-6 pt-2 md:max-h-doc-sidebar bg-primary-bg md:bg-transparent">
+                                        <div style="display:flex; justify-content:center; align-items:center; margin-top:16px;">
+                                            <img src="assets/Logo.png" alt="Flavoured Water Inc. Logo" style="max-width:180px; width:30vw; min-width:120px; height:auto; display:block;" />
+                                        </div>
                                         <div class="flex flex-wrap ms-4 -me-2 p-2 bg-secondary-bg md:bg-primary-bg rounded">
                                             <a class="text-eureka hover:text-eureka" href=https://www.wangchucheng.com/en/docs/hugo-eureka/>Flavoured Water</a>
                                         </div>
@@ -181,55 +184,31 @@
                                 <div class=flex>
                                     <div class="w-full lg:w-3/4 px-6">
                                         <article class=prose>
-                                            <h1 class=mb-4>Flavoured Water</h1>
-                                            <div class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center">
-                                                <div class="me-6 my-2">
-                                                    <i class="fas fa-calendar me-1"></i>
-                                                    <span>2020-10-19</span>
+                                            <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; margin-bottom:32px; width:100%;">
+                                                <h1 style="font-size:3vw; font-weight:900; letter-spacing:2px; margin-bottom:16px; max-width:1200px; width:90vw; text-align:center;">FLAVOURED WATR</h1>
+                                                <div style="background: linear-gradient(135deg, #840202 0%, #0b0174 100%); border-radius:32px; padding:32px 0 8px 0; margin-bottom:8px; box-shadow:0 4px 24px rgba(0,0,0,0.08); display:flex; justify-content:center; align-items:center;">
+                                                    <img src="assets/FlavourWatrInc.png" alt="Flavoured Water Inc. Logo" style="max-width:600px; width:95vw; height:auto; display:block; background:transparent;" />
                                                 </div>
-                                                <div class="me-6 my-2">
-                                                    <i class="fas fa-clock me-1"></i>
-                                                    <span>2 min read</span>
-                                                </div>
+                                                <h2 style="font-size:1.3vw; font-weight:200; margin-bottom:10px; max-width:600px; width:90vw; text-align:center;">A feature-rich and highly customizable water</h2>
                                             </div>
-                                            <img src="assets/FlavourWatrInc.png" alt="Flavoured Water Inc. Logo" style="max-width:300px; width:100%; height:auto;" />
-                                            <p>
-                                                Flavoured Water is a feature-rich and highly customizable <a href=https://gohugo.io/>Hugo</a>
-                                                theme. Using Flavoured Water allows you to customize and deploy your website quickly and easily.
-                                            </p>
-                                            <h2 id=try-Flavoured-Water>Try Flavoured Water</h2>
-                                            <p>
-                                                Flavoured Water is committed to providing an elegant, feature-rich and highly customizable theme for <a href=https://gohugo.io/>Hugo</a>
-                                                .
-                                            </p>
-                                            <p>
-                                                If this project is helpful to you, you can give Flavoured Water a <a href=https://github.com/wangchucheng/hugo-eureka/>Star</a>
-                                                and follow my <a href=https://github.com/wangchucheng/>Github</a>
-                                                .
-                                            </p>
-                                            <p>
-                                                <a class=github-button href=https://github.com/wangchucheng/hugo-eureka data-size=large aria-label="Star wangchucheng/hugo-eureka on GitHub">Star</a>
-                                            </p>
-                                            <p>
-                                                Read <a href=getting-started>Getting Started</a>
-                                                to learn how to build and deploy your website. Or check the latest <a href=https://hugo-eureka.netlify.app/>Demo</a>
-                                                and <a href=https://github.com/wangchucheng/hugo-eureka/>Project Repository</a>
-                                                to start exploring!
-                                            </p>
-                                            <p>
-                                                Eureka is a theme of continuous improvement. If you have any feature suggestions or encounter any problems, please feel free to <a href=https://github.com/wangchucheng/hugo-eureka/issues>open an issue</a>
-                                                .
-                                            </p>
-                                            <h2 id=view-document>View Document</h2>
-                                            <ul>
-                                                <li>
+                                            <ul style="font-size:1.5rem; font-weight:500; text-align:left; margin:32px 0; line-height:1.6; max-width:900px; list-style:disc inside;">
+                                                <li>Flavoured Water is a feature-rich and highly customizable <a href=https://gohugo.io/>Flavoured Water</a> theme. Using Flavoured Water allows you to customize and deploy your website quickly and easily.</li>
+                                                <li>Flavoured Water is committed to providing an elegant, feature-rich and highly customizable theme for <a href=https://gohugo.io/>Flavoured Water</a>.</li>
+                                                <li>If this project is helpful to you, you can give Flavoured Water a <a href=https://github.com/wangchucheng/hugo-eureka/>Star</a> and follow my <a href=https://github.com/wangchucheng/>Github</a>.</li>
+                                                <li>Read <a href=getting-started>Getting Started</a> to learn how to build and deploy your website. Or check the latest <a href=https://hugo-eureka.netlify.app/>Demo</a> and <a href=https://github.com/wangchucheng/hugo-eureka/>Project Repository</a> to start exploring!</li>
+                                                <li style="font-size:1.7rem;">Eureka is a theme of continuous improvement. If you have any feature suggestions or encounter any problems, please feel free to <a href=https://github.com/wangchucheng/hugo-eureka/issues>open an issue</a>.</li>
+                                            </ul>
+                                            <h2 id=try-Flavoured-Water style="text-align: center; font-size:3rem; font-weight:900; margin:32px 0 24px 0; letter-spacing:1px;">Try Flavoured Water</h2>
+                                            <h2 id=view-document class="text-center" style="font-size:4.5rem; font-weight:900; margin:40px 0 32px 0; letter-spacing:2px;">View Document</h2>
+                                            <ul style="font-size:1.6rem; line-height:1.5;">
+                                                <li style="margin-bottom:18px;">
                                                     <strong>
                                                         <a href=getting-started>Getting Started</a>
                                                     </strong>
                                                     : In <a href=getting-started>Getting Started</a>
                                                     you will learn how to quickly build a Hugo site with Flavoured Water.
                                                 </li>
-                                                <li>
+                                                <li style="margin-bottom:18px;">
                                                     <strong>
                                                         <a href=homepage-configuration>Homepage Configuration</a>
                                                     </strong>
@@ -237,14 +216,14 @@
                                                     , I believe you have successfully run the Hugo site using Flavoured Water. In <a href=homepage-configuration>Homepage Configuration</a>
                                                     you will learn how to customize the website homepage.
                                                 </li>
-                                                <li>
+                                                <li style="margin-bottom:18px;">
                                                     <strong>
                                                         <a href=content-management>Content Management</a>
                                                     </strong>
                                                     : You have configured the website homepage in <a href=homepage-configuration>Homepage Configuration</a>
                                                     . Next we will add some content. Content Management will lead you to understand site content structure and editing skills.
                                                 </li>
-                                                <li>
+                                                <li style="margin-bottom:18px;">
                                                     <strong>
                                                         <a href=customization>Customize Eureka</a>
                                                     </strong>
@@ -252,7 +231,7 @@
                                                     , you have already learned about all kinds of content of Eureka. Next, we will introduce Eureka &rsquo;s customization options. <a href=customization>Customize Eureka</a>
                                                     will lead you to understand how Eureka is configured and its options.
                                                 </li>
-                                                <li>
+                                                <li style="margin-bottom:18px;">
                                                     <strong>
                                                         <a href=multilingual-mode>Multilingual Mode</a>
                                                     </strong>
@@ -262,7 +241,7 @@
                                                     . <a href=multilingual-mode>Multilingual Mode</a>
                                                     will lead you to understand how to build a multilingual site.
                                                 </li>
-                                                <li>
+                                                <li style="margin-bottom:18px;">
                                                     <strong>
                                                         <a href=update>Update Eureka</a>
                                                     </strong>
@@ -270,15 +249,15 @@
                                                     will introduce different ways to update Eureka.
                                                 </li>
                                             </ul>
-                                            <h2 id=sites-using-eureka>Sites Using Eureka</h2>
-                                            <ul>
-                                                <li>
+                                            <h2 id=sites-using-eureka class="text-center" style="font-size:3.5rem; font-weight:900; margin:40px 0 32px 0; letter-spacing:2px;">Sites Using Eureka</h2>
+                                            <ul style="font-size:2rem; line-height:1.5; font-weight:500;">
+                                                <li style="margin-bottom:16px;">
                                                     <a href=https://www.wangchucheng.com>wangchucheng.com</a>
                                                 </li>
-                                                <li>
+                                                <li style="margin-bottom:16px;">
                                                     <a href=https://www.ruiqima.com>ruiqima.com</a>
                                                 </li>
-                                                <li>and more &mldr;</li>
+                                                <li style="margin-bottom:16px;">and more &mldr;</li>
                                             </ul>
                                             <p>
                                                 Are you using Flavoured Water? 
