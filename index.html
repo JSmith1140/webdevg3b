@@ -18,9 +18,8 @@
         <link rel="stylesheet" href="styles/styles.css" />
 
         <!-- HEADER-->
-    </head>
     <body class="bg-gray-50 text-gray-800 dark:bg-slate-900 dark:text-slate-100">
-        <header
+    <header
         aria-label="Site header"
         class="bg-white/80 backdrop-blur border-b border-gray-200 dark:bg-slate-900/80 dark:border-slate-700"
         >
@@ -40,7 +39,7 @@
             </span>
             </a>
 
-            <div class="flex items-center gap-6">
+            <div class="flex items-center gap-4">
             <nav class="hidden sm:flex items-center gap-4 text-sm font-medium">
                 <a
                 href="index.html"
@@ -71,10 +70,9 @@
                 Theme
                 <span aria-hidden="true">▾</span>
                 </button>
-
                 <div
                 id="themeDropdown"
-                class="absolute right-0 mt-2 w-40 bg-white border border-gray-200 rounded-lg shadow-lg py-1 text-sm hidden dark:bg-slate-800 dark:border-slate-700"
+                class="absolute right-0 mt-2 w-52 bg-white border border-gray-200 rounded-lg shadow-lg py-1 text-sm hidden dark:bg-slate-800 dark:border-slate-700"
                 >
                 <button
                     type="button"
@@ -97,10 +95,10 @@
                 >
                     System default
                 </button>
-                </div>
                 <div
-                class="my-1 border-t border-gray-200 dark:border-slate-700">
-                </div>
+                    class="my-1 border-t border-gray-200 dark:border-slate-700"
+                ></div>
+            
                 <div class="px-3 py-2 space-y-2">
                     <div class="flex items-center justify-between">
                     <span
@@ -139,10 +137,58 @@
                     </button>
                     </div>
                 </div>
-                </div>
             </div>
-        </header>
-
+        </div>
+            <button
+                id="mobileMenuToggle"
+                type="button"
+                class="sm:hidden inline-flex items-center justify-center rounded-full border border-gray-300 bg-white p-2 text-gray-700 shadow-sm hover:bg-gray-100 dark:bg-slate-800 dark:border-slate-600 dark:text-slate-100 dark:hover:bg-slate-700"
+                aria-label="Toggle navigation menu"
+                aria-expanded="false"
+            >
+                <span class="sr-only">Toggle navigation</span>
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="1.8"
+                >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4 6h16M4 12h16M4 18h16"
+                />
+                </svg>
+            </button>
+        </nav>
+        <div
+            id="mobileMenu"
+            class="sm:hidden border-t border-gray-200 bg-white dark:bg-slate-900 hidden"
+        >
+            <nav class="max-w-6xl mx-auto px-6 py-3 flex flex-col gap-2 text-base">
+            <a
+                href="index.html"
+                class="py-1 text-gray-700 hover:text-emerald-700 dark:text-slate-200 dark:hover:text-emerald-300"
+            >
+                Home
+            </a>
+            <a
+                href="about.html"
+                class="py-1 text-emerald-700 dark:text-emerald-300 font-semibold"
+            >
+                About
+            </a>
+            <a
+                href="shop.html"
+                class="py-1 text-gray-700 hover:text-emerald-700 dark:text-slate-200 dark:hover:text-emerald-300"
+            >
+                Shop
+            </a>
+        </nav>
+    </div>
+</header>
     <main class="grow pt-16">
             <div class=pl-scrollbar>
                 <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
@@ -150,10 +196,6 @@
                         <div class="flex flex-col md:flex-row bg-secondary-bg rounded">
                             <div class="md:w-1/4 lg:w-1/5 border-e">
                                 <div class="sticky top-16 pt-6">
-                                    <div id=sidebar-title class="md:hidden mx-4 px-2 pt-4 pb-2 md:border-b text-tertiary-text md:text-primary-text">
-                                        <span class=font-semibold>Table of Contents</span>
-                                        <i class='fas fa-caret-right ms-1'></i>
-                                    </div>
                                     <div id=sidebar-toc class="hidden md:block overflow-y-auto mx-6 md:mx-0 pe-6 pt-2 md:max-h-doc-sidebar bg-primary-bg md:bg-transparent">
                                         <ul class=ps-6>
                                     </div>
@@ -162,7 +204,7 @@
                                     <img
                                         src="assets/Logo.png"
                                         alt="Flavored Watr Inc. logo"
-                                        class="items-center w-64 md:w-96 object-contain drop-shadow"
+                                        class="items-center w-[32rem] md:w-[40rem] object-contain drop-shadow"
                                     />
                                 </div>
                             </div>
@@ -171,21 +213,14 @@
                                     <div class="w-full lg:w-3/4 p-6">
                                         <article class="prose max-w-none">
                                             <h1 class="text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6">FLAVOURED WATR</h1>
-                                            <div class="hero-controls flex flex-col sm:flex-row items-center gap-4 mb-6">
-                                                <button id="increase-size-btn" class="btn-primary px-6 py-3 text-2xl font-bold rounded bg-emerald-600 text-white hover:bg-emerald-700 transition">Make this bigger</button>
-                                                <button id="reset-size-btn" class="btn-secondary hidden px-4 py-2 rounded bg-gray-300 text-gray-800 hover:bg-gray-400 transition text-2xl">Reset size</button>
-                                                <span id="size-indicator" class="size-indicator text-white text-2xl font-bold sm:text-3xl">
-                                                    600px wide
-                                                </span>
-                                            </div>
                                             <div class="hero-image-shell flex justify-center items-center">
                                                 <img id="zoomable-image"
                                                     src="assets/FlavourWatrInc.png"
                                                     alt="Flavoured Water Inc. Logo"
                                                     data-base-width="600"
                                                     data-max-width="800"
-                                                    data-step="100"
-                                                    class="hero-logo w-full max-w-[600px] sm:max-w-[700px] lg:max-w-[800px] h-auto mx-auto -mt-6"
+                                                    data-step="400"
+                                                    class="hero-logo w-full max-w-[00px] sm:max-w-[700px] lg:max-w-[800px] h-auto mx-auto -mt-6"
                                                 />
                                             </div>
                                             <div id="zoom-modal" class="zoom-modal fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden">
