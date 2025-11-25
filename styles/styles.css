@@ -454,3 +454,77 @@ html.dark #themeDropdown button[data-theme]:hover {
   }
 }
 /*END OF CSS WRITTEN FOR NAV BAR*/
+
+/* START OF CSS FOR FOOTER */
+
+footer[aria-label="Site footer"] {
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-top: 1px solid rgba(148, 163, 184, 0.6);
+  background-color: rgba(255, 255, 255, 0.88);
+  margin-top: 4rem;
+}
+
+html.dark footer[aria-label="Site footer"] {
+  background-color: rgba(2, 6, 23, 0.9);
+  border-top-color: rgba(30, 64, 175, 0.5);
+}
+
+footer[aria-label="Site footer"] > div {
+  max-width: 72rem;
+  margin-inline: auto;
+  padding: 2rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+footer[aria-label="Site footer"] img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+}
+
+footer[aria-label="Site footer"] p {
+  font-size: 0.95rem;
+  color: var(--fw-text-muted-light);
+}
+
+html.dark footer[aria-label="Site footer"] p {
+  color: var(--fw-text-muted-dark);
+}
+
+footer[aria-label="Site footer"] a {
+  font-size: 0.95rem;
+  text-decoration: none;
+  font-weight: 500;
+  color: #374151;
+  transition: color 0.15s ease, transform 0.1s ease;
+}
+
+footer[aria-label="Site footer"] a:hover {
+  color: #047857;
+  transform: translateY(-1px);
+}
+
+html.dark footer[aria-label="Site footer"] a {
+  color: #e5e7eb;
+}
+
+html.dark footer[aria-label="Site footer"] a:hover {
+  color: #6ee7b7;
+}
+
+@media (max-width: 640px) {
+  footer[aria-label="Site footer"] > div {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer[aria-label="Site footer"] .footer-links {
+    justify-content: center;
+  }
+}
+/* END OF CSS FOR FOOTER */
