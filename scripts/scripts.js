@@ -169,24 +169,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 })();
-
-document.addEventListener("DOMContentLoaded", () => {
-  const mobileMenuToggle = document.getElementById("mobileMenuToggle");
-  const mobileMenu = document.getElementById("mobileMenu");
-
-  if (mobileMenuToggle && mobileMenu) {
-    mobileMenuToggle.addEventListener("click", () => {
-      const isOpen = !mobileMenu.classList.contains("hidden");
-      mobileMenu.classList.toggle("hidden");
-      mobileMenuToggle.setAttribute("aria-expanded", String(!isOpen));
-    });
-
-    mobileMenu.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        mobileMenu.classList.add("hidden");
-        mobileMenuToggle.setAttribute("aria-expanded", "false");
-      });
-    });
-  }
-});
 //END OF HEADER
+
+
