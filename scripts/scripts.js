@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //START OF HEADER
 (function () {
   const html = document.documentElement;
-  const storageKey = "fw-theme";
+  const THEME_KEY = "fw-theme";
   const themeToggle = document.getElementById("themeToggle");
   const themeDropdown = document.getElementById("themeDropdown");
   const systemMedia = window.matchMedia("(prefers-color-scheme: dark)");
@@ -133,15 +133,15 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function setTheme(theme) {
-    localStorage.setItem(storageKey, theme);
+    localStorage.setItem(THEME_KEY, theme);
     applyTheme(theme);
   }
 
-  const savedTheme = localStorage.getItem(storageKey) || "system";
+  const savedTheme = localStorage.getItem(THEME_KEY) || "system";
   applyTheme(savedTheme);
 
   systemMedia.addEventListener("change", () => {
-    const current = localStorage.getItem(storageKey) || "system";
+    const current = localStorage.getItem(THEME_KEY) || "system";
     if (current === "system") {
       applyTheme("system");
     }
@@ -154,13 +154,61 @@ document.addEventListener("DOMContentLoaded", function () {
     themeDropdown.classList.toggle("hidden");
   });
 
-  themeDropdown.addEventListener("click", (e) => {
-    const button = e.target.closest("button[data-theme]");
-    if (!button) return;
+  const FONT_KEY = "fw-font-size";
+  const MIN_FONT = 0.9;
+  const MAX_FONT = 1.3;
+  const STEP = 0.05;
 
-    const theme = button.getAttribute("data-theme");
-    setTheme(theme);
-    themeDropdown.classList.add("hidden");
+  const fontSmaller = document.getElementById("fontSmaller");
+  const fontLarger = document.getElementById("fontLarger");
+  const fontReset = document.getElementById("fontReset");
+  const fontSizeValue = document.getElementById("fontSizeValue");
+
+  let savedFont = parseFloat(localStorage.getItem(FONT_KEY));
+
+  let currentFont =
+    !isNaN(savedFont) && savedFont >= MIN_FONT && savedFont <= MAX_FONT
+      ? savedFont
+      : 1;
+
+  function applyFontSize() {
+    html.style.fontSize = currentFont + "rem";
+    localStorage.setItem(FONT_KEY, currentFont.toFixed(2));
+    if (fontSizeValue) {
+      fontSizeValue.textContent = Math.round(currentFont * 100) + "%";
+    }
+  }
+
+  applyFontSize();
+
+  if (fontSmaller && fontLarger && fontReset) {
+    fontSmaller.addEventListener("click", (e) => {
+      e.stopPropagation();
+      currentFont = Math.max(MIN_FONT, currentFont - STEP);
+      applyFontSize();
+    });
+
+    fontLarger.addEventListener("click", (e) => {
+      e.stopPropagation();
+      currentFont = Math.min(MAX_FONT, currentFont + STEP);
+      applyFontSize();
+    });
+
+    fontReset.addEventListener("click", (e) => {
+      e.stopPropagation();
+      currentFont = 1;
+      applyFontSize();
+    });
+  }
+
+  themeDropdown.addEventListener("click", (e) => {
+    const themeButton = e.target.closest("button[data-theme]");
+    if (themeButton) {
+      const theme = themeButton.getAttribute("data-theme");
+      setTheme(theme);
+      themeDropdown.classList.add("hidden");
+      return;
+    }
   });
 
   document.addEventListener("click", (e) => {
@@ -169,24 +217,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 })();
-
-document.addEventListener("DOMContentLoaded", () => {
-  const mobileMenuToggle = document.getElementById("mobileMenuToggle");
-  const mobileMenu = document.getElementById("mobileMenu");
-
-  if (mobileMenuToggle && mobileMenu) {
-    mobileMenuToggle.addEventListener("click", () => {
-      const isOpen = !mobileMenu.classList.contains("hidden");
-      mobileMenu.classList.toggle("hidden");
-      mobileMenuToggle.setAttribute("aria-expanded", String(!isOpen));
-    });
-
-    mobileMenu.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        mobileMenu.classList.add("hidden");
-        mobileMenuToggle.setAttribute("aria-expanded", "false");
-      });
-    });
-  }
-});
 //END OF HEADER
