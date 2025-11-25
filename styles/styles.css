@@ -1,10 +1,10 @@
 /* styles/styles.css - custom styles for the Flavored Watr About page */
 
 /* Handwriting/cursive font for headings (fall-back provided) */
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
 .font-handwriting {
-  font-family: 'Great Vibes', cursive;
+  font-family: "Great Vibes", cursive;
 }
 
 /* Small typography and color adjustments */
@@ -16,7 +16,12 @@
 /* Make the main cursive heading class available (used in HTML via 'font-handwriting') */
 .text-emerald-700 {
   --tw-text-opacity: 1;
-  color: rgba(4, 120, 87, var(--tw-text-opacity)); /* slightly adjusted emerald */
+  color: rgba(
+    4,
+    120,
+    87,
+    var(--tw-text-opacity)
+  ); /* slightly adjusted emerald */
 }
 
 /* Ensure the team initials squares remain visually consistent */
@@ -249,3 +254,203 @@ img {
     max-height: 70vh;
   }
 }
+
+/*START OF CSS WRITTEN FOR DARK/LIGHT MODE*/
+:root {
+  --fw-page-bg-light: #f9fafb;
+  --fw-page-bg-dark: #020617;
+
+  --fw-card-bg-light: #ffffff;
+  --fw-card-bg-dark: #020617;
+
+  --fw-text-main-light: #111827;
+  --fw-text-main-dark: #e5e7eb;
+
+  --fw-text-muted-light: #4b5563;
+  --fw-text-muted-dark: #d1d5db;
+}
+
+body {
+  background-color: var(--fw-page-bg-light);
+  color: var(--fw-text-main-light);
+}
+
+html.dark body {
+  background-color: var(--fw-page-bg-dark);
+  color: var(--fw-text-main-dark);
+}
+
+.bg-white {
+  background-color: var(--fw-card-bg-light);
+}
+
+html.dark .bg-white {
+  background-color: var(--fw-card-bg-dark);
+}
+
+.text-gray-700,
+.text-gray-600 {
+  color: var(--fw-text-muted-light);
+}
+
+html.dark .text-gray-700,
+html.dark .text-gray-600 {
+  color: var(--fw-text-muted-dark);
+}
+
+html.dark .text-gray-600 {
+  opacity: 0.9;
+}
+/*END OF CSS WRITTEN FOR DARK/LIGHT MODE*/
+
+/*START OF CSS WRITTEN FOR NAV BAR*/
+header[aria-label="Site header"] {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.6);
+  background-color: rgba(255, 255, 255, 0.88);
+}
+
+html.dark header[aria-label="Site header"] {
+  background-color: rgba(2, 6, 23, 0.9);
+  border-bottom-color: rgba(30, 64, 175, 0.5);
+}
+
+header[aria-label="Site header"] > nav {
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  padding-block: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+header[aria-label="Site header"] a[href="index.html"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+header[aria-label="Site header"] img[alt*="Flavored Watr Inc. logo"] {
+  width: 3.25rem;
+  height: 3.25rem;
+  object-fit: contain;
+}
+
+header[aria-label="Site header"] a[href="index.html"] span {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  font-size: 1.25rem;
+}
+
+header[aria-label="Site header"] nav a {
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  transition: color 0.18s ease, transform 0.1s ease;
+}
+
+header[aria-label="Site header"] nav a {
+  color: #374151;
+}
+
+header[aria-label="Site header"] nav a:hover {
+  color: #047857;
+  transform: translateY(-1px);
+}
+
+html.dark header[aria-label="Site header"] nav a {
+  color: #e5e7eb;
+}
+
+html.dark header[aria-label="Site header"] nav a:hover {
+  color: #6ee7b7;
+}
+
+#themeToggle {
+  border-radius: 999px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  background-color: #ffffff;
+  color: #374151;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.12);
+  transition: background-color 0.15s ease, box-shadow 0.15s ease,
+    transform 0.1s ease;
+}
+
+#themeToggle:hover {
+  background-color: #f3f4f6;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.16);
+  transform: translateY(-1px);
+}
+
+html.dark #themeToggle {
+  background-color: #020617;
+  color: #e5e7eb;
+  border-color: #1f2937;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.7);
+}
+
+html.dark #themeToggle:hover {
+  background-color: #0f172a;
+}
+
+#themeDropdown {
+  min-width: 10rem;
+  margin-top: 0.4rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  background-color: #ffffff;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.2);
+  overflow: hidden;
+}
+
+html.dark #themeDropdown {
+  background-color: #020617;
+  border-color: #1f2937;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.9);
+}
+
+#themeDropdown button[data-theme] {
+  width: 100%;
+  text-align: left;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.95rem;
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+#themeDropdown button[data-theme]:hover {
+  background-color: rgba(243, 244, 246, 0.9);
+}
+
+html.dark #themeDropdown button[data-theme]:hover {
+  background-color: #1f2937;
+}
+
+@media (max-width: 640px) {
+  header[aria-label="Site header"] > nav {
+    padding-inline: 1rem;
+    gap: 1rem;
+  }
+
+  header[aria-label="Site header"] a[href="index.html"] span {
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+  }
+}
+/*END OF CSS WRITTEN FOR NAV BAR*/

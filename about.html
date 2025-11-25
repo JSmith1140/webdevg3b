@@ -8,12 +8,103 @@
     <!-- Tailwind Play CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- FOR DARK MODE // HEADER-->
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+
     <!-- Custom styles -->
     <link rel="stylesheet" href="styles/styles.css" />
+
+    <!-- HEADER-->
   </head>
-  <body class="bg-gray-50 text-gray-800">
-    <!-- Header -->
-    <header aria-label="Main header" class="sr-only"></header>
+  <body class="bg-gray-50 text-gray-800 dark:bg-slate-900 dark:text-slate-100">
+    <header
+      aria-label="Site header"
+      class="bg-white/80 backdrop-blur border-b border-gray-200 dark:bg-slate-900/80 dark:border-slate-700"
+    >
+      <nav
+        class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between"
+      >
+        <a href="index.html" class="flex items-center gap-2">
+          <img
+            src="assets/Logo.png"
+            alt="Flavored Watr Inc. logo"
+            class="w-9 h-9 object-contain"
+          />
+          <span
+            class="font-semibold tracking-wide text-gray-800 dark:text-slate-100"
+          >
+            FLAVOURED WATR INC.
+          </span>
+        </a>
+
+        <div class="flex items-center gap-6">
+          <nav class="hidden sm:flex items-center gap-4 text-sm font-medium">
+            <a
+              href="index.html"
+              class="text-gray-700 hover:text-emerald-700 dark:text-slate-200 dark:hover:text-emerald-300"
+            >
+              Home
+            </a>
+            <a
+              href="about.html"
+              class="text-emerald-700 dark:text-emerald-300 font-semibold"
+            >
+              About
+            </a>
+            <a
+              href="shop.html"
+              class="text-gray-700 hover:text-emerald-700 dark:text-slate-200 dark:hover:text-emerald-300"
+            >
+              Shop
+            </a>
+          </nav>
+
+          <div class="relative">
+            <button
+              id="themeToggle"
+              type="button"
+              class="inline-flex items-center gap-1 px-3 py-1.5 text-sm font-medium rounded-full border border-gray-300 bg-white text-gray-700 shadow-sm hover:bg-gray-100 dark:bg-slate-800 dark:border-slate-600 dark:text-slate-100 dark:hover:bg-slate-700"
+            >
+              Theme
+              <span aria-hidden="true">▾</span>
+            </button>
+
+            <div
+              id="themeDropdown"
+              class="absolute right-0 mt-2 w-40 bg-white border border-gray-200 rounded-lg shadow-lg py-1 text-sm hidden dark:bg-slate-800 dark:border-slate-700"
+            >
+              <button
+                type="button"
+                data-theme="light"
+                class="w-full text-left px-3 py-2 hover:bg-gray-100 dark:hover:bg-slate-700 text-gray-800 dark:text-slate-100"
+              >
+                Light mode
+              </button>
+              <button
+                type="button"
+                data-theme="dark"
+                class="w-full text-left px-3 py-2 hover:bg-gray-100 dark:hover:bg-slate-700 text-gray-800 dark:text-slate-100"
+              >
+                Dark mode
+              </button>
+              <button
+                type="button"
+                data-theme="system"
+                class="w-full text-left px-3 py-2 hover:bg-gray-100 dark:hover:bg-slate-700 text-gray-800 dark:text-slate-100"
+              >
+                System default
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--END OF HEADER-->
 
     <main class="max-w-6xl mx-auto px-6 py-12">
       <!-- Hero / Title -->

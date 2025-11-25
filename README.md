@@ -16,6 +16,6 @@ More Pages: Home, NavBar/Footer, Shop Page etc.
 Idea: Bottled Flavored Water Company
 Split:
 Kaden - About us,
-Emily - NavBar/Footer
+Emily - NavBar/Footer (Code written in about.html for group members to copy)
 Jacob - Shop Page
 Michael - Home
