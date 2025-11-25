@@ -1,1 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Eureka&display=swap"
+      rel="stylesheet"
+    />
+    <title>Flavoured Watr - Shop</title>
+  </head>
+  <body>
+    <header
+      aria-label="Site header"
+      class="bg-white/80 backdrop-blur border-b border-gray-200 dark:bg-slate-900/80 dark:border-slate-700"
+    >
+      <nav
+        class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between"
+      >
+        <a href="index.html" class="flex items-center gap-2">
+          <img
+            src="assets/Logo.png"
+            alt="Flavored Watr Inc. logo"
+            class="w-9 h-9 object-contain"
+          />
+          <span
+            class="font-semibold tracking-wide text-gray-800 dark:text-slate-100"
+          >
+            FLAVOURED WATR INC.
+          </span>
+        </a>
 
+        <div class="flex items-center gap-4">
+          <nav class="hidden sm:flex items-center gap-4 text-sm font-medium">
+            <a
+              href="index.html"
+              class="text-gray-700 hover:text-emerald-700 dark:text-slate-200 dark:hover:text-emerald-300"
+            >
+              Home
+            </a>
+            <a
+              href="about.html"
+              class="text-emerald-700 dark:text-emerald-300 font-semibold"
+            >
+              About
+            </a>
+            <a
+              href="shop.html"
+              class="text-gray-700 hover:text-emerald-700 dark:text-slate-200 dark:hover:text-emerald-300"
+            >
+              Shop
+            </a>
+          </nav>
+
+          <div class="relative">
+            <button
+              id="themeToggle"
+              type="button"
+              class="inline-flex items-center gap-1 px-3 py-1.5 text-sm font-medium rounded-full border border-gray-300 bg-white text-gray-700 shadow-sm hover:bg-gray-100 dark:bg-slate-800 dark:border-slate-600 dark:text-slate-100 dark:hover:bg-slate-700"
+            >
+              Theme
+              <span aria-hidden="true">▾</span>
+            </button>
+
+            <div
+              id="themeDropdown"
+              class="absolute right-0 mt-2 w-52 bg-white border border-gray-200 rounded-lg shadow-lg py-1 text-sm hidden dark:bg-slate-800 dark:border-slate-700"
+            >
+              <button
+                type="button"
+                data-theme="light"
+                class="w-full text-left px-3 py-2 hover:bg-gray-100 dark:hover:bg-slate-700 text-gray-800 dark:text-slate-100"
+              >
+                Light mode
+              </button>
+              <button
+                type="button"
+                data-theme="dark"
+                class="w-full text-left px-3 py-2 hover:bg-gray-100 dark:hover:bg-slate-700 text-gray-800 dark:text-slate-100"
+              >
+                Dark mode
+              </button>
+              <button
+                type="button"
+                data-theme="system"
+                class="w-full text-left px-3 py-2 hover:bg-gray-100 dark:hover:bg-slate-700 text-gray-800 dark:text-slate-100"
+              >
+                System default
+              </button>
+
+              <div
+                class="my-1 border-t border-gray-200 dark:border-slate-700"
+              ></div>
+
+              <div class="px-3 py-2 space-y-2">
+                <div class="flex items-center justify-between">
+                  <span
+                    class="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-slate-400"
+                  >
+                    Font size
+                  </span>
+                  <span
+                    id="fontSizeValue"
+                    class="text-xs text-gray-500 dark:text-slate-400"
+                  >
+                    100%
+                  </span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <button
+                    type="button"
+                    id="fontSmaller"
+                    class="flex-1 inline-flex items-center justify-center px-2 py-1 rounded-full border border-gray-300 bg-white text-xs font-medium text-gray-700 shadow-sm hover:bg-gray-100 dark:bg-slate-900 dark:border-slate-600 dark:text-slate-100 dark:hover:bg-slate-700"
+                  >
+                    A-
+                  </button>
+                  <button
+                    type="button"
+                    id="fontReset"
+                    class="inline-flex items-center justify-center px-2 py-1 rounded-full border border-gray-200 bg-gray-50 text-xs font-medium text-gray-600 hover:bg-gray-100 dark:bg-slate-900 dark:border-slate-700 dark:text-slate-200 dark:hover:bg-slate-800"
+                  >
+                    Reset
+                  </button>
+                  <button
+                    type="button"
+                    id="fontLarger"
+                    class="flex-1 inline-flex items-center justify-center px-2 py-1 rounded-full border border-gray-300 bg-white text-xs font-medium text-gray-700 shadow-sm hover:bg-gray-100 dark:bg-slate-900 dark:border-slate-600 dark:text-slate-100 dark:hover:bg-slate-700"
+                  >
+                    A+
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            id="mobileMenuToggle"
+            type="button"
+            class="sm:hidden inline-flex items-center justify-center rounded-full border border-gray-300 bg-white p-2 text-gray-700 shadow-sm hover:bg-gray-100 dark:bg-slate-800 dark:border-slate-600 dark:text-slate-100 dark:hover:bg-slate-700"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <div
+        id="mobileMenu"
+        class="sm:hidden border-t border-gray-200 bg-white dark:bg-slate-900 hidden"
+      >
+        <nav class="max-w-6xl mx-auto px-6 py-3 flex flex-col gap-2 text-base">
+          <a
+            href="index.html"
+            class="py-1 text-gray-700 hover:text-emerald-700 dark:text-slate-200 dark:hover:text-emerald-300"
+          >
+            Home
+          </a>
+          <a
+            href="about.html"
+            class="py-1 text-emerald-700 dark:text-emerald-300 font-semibold"
+          >
+            About
+          </a>
+          <a
+            href="shop.html"
+            class="py-1 text-gray-700 hover:text-emerald-700 dark:text-slate-200 dark:hover:text-emerald-300"
+          >
+            Shop
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Floating Cart Icon -->
+    <div id="cartIconContainer" onclick="toggleCart()">
+      <img
+        src="https://img.icons8.com/material-outlined/48/0077cc/shopping-cart.png"
+        alt="Cart"
+      />
+      <span id="cartCount">0</span>
+    </div>
+
+    <!-- Shop Description -->
+    <div
+      class="shop-description text-center max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-lg mt-10"
+    >
+      <!-- Main Title -->
+      <p class="text-6xl md:text-7xl font-handwriting text-emerald-700 mb-5">
+        Shop
+      </p>
+
+      <!-- Subtitle -->
+      <p class="text-lg md:text-xl text-gray-700 mb-6 font-eureka text-eureka">
+        Refresh yourself with our delicious flavored water
+      </p>
+
+      <!-- Promotional Text -->
+      <p class="text-indigo-600 font-semibold text-lg md:text-xl">
+        Free Shipping with any purchase!
+      </p>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="shop-grid">
+      <div class="product">
+        <div class="product-top">
+          <img src="assets/Red-Bottles.png" alt="Cherry" />
+          <button
+            class="info-btn"
+            onclick="openInfo('Cherry - 3 Pack','$5.99','assets/Red-Bottles.png')"
+          >
+            ⓘ
+          </button>
+        </div>
+        <p class="font-eureka text-4xl text-eureka">Cherry - 3 Pack</p>
+        <br />
+        <p class="text-2xl">$5.99</p>
+        <button
+          class="add-to-cart"
+          onclick="addToCart('Cherry - 3 Pack',5.99,'assets/Red-Bottles.png')"
+        >
+          ADD TO CART
+        </button>
+      </div>
+
+      <div class="product">
+        <div class="product-top">
+          <img src="assets/Yellow-Bottles.png" alt="Lemon" />
+          <button
+            class="info-btn"
+            onclick="openInfo('Lemon - 3 Pack','$5.99','assets/Yellow-Bottles.png')"
+          >
+            ⓘ
+          </button>
+        </div>
+        <p class="font-eureka text-4xl text-eureka">Lemon - 3 Pack</p>
+        <br />
+        <p class="text-2xl">$5.99</p>
+        <button
+          class="add-to-cart"
+          onclick="addToCart('Lemon - 3 Pack',5.99,'assets/Yellow-Bottles.png')"
+        >
+          ADD TO CART
+        </button>
+      </div>
+
+      <div class="product">
+        <div class="product-top">
+          <img src="assets/Blue-Bottles.png" alt="Blue Raspberry" />
+          <button
+            class="info-btn"
+            onclick="openInfo('Blue Raspberry - 3 Pack','$5.99','assets/Blue-Bottles.png')"
+          >
+            ⓘ
+          </button>
+        </div>
+        <p class="font-eureka text-4xl text-eureka">Blue Raspberry - 3 Pack</p>
+        <br />
+        <p class="text-2xl">$5.99</p>
+        <button
+          class="add-to-cart"
+          onclick="addToCart('Blue Raspberry - 3 Pack',5.99,'assets/Blue-Bottles.png')"
+        >
+          ADD TO CART
+        </button>
+      </div>
+
+      <div class="product">
+        <div class="product-top">
+          <img src="assets/Variety-Bottles.png" alt="Variety 3 Pack" />
+          <button
+            class="info-btn"
+            onclick="openInfo('Variety 3 Pack','$5.99','assets/Variety-Bottles.png')"
+          >
+            ⓘ
+          </button>
+        </div>
+        <p class="font-eureka text-4xl text-eureka">Variety 3 Pack</p>
+        <br />
+        <p class="text-2xl">$5.99</p>
+        <button
+          class="add-to-cart"
+          onclick="addToCart('Variety 3 Pack',5.99,'assets/Variety-Bottles.png')"
+        >
+          ADD TO CART
+        </button>
+      </div>
+    </div>
+
+    <!-- Cart Drawer -->
+    <div id="cartDrawer">
+      <button id="close-cart" onclick="toggleCart()">× Close</button>
+      <h2>Your Cart</h2>
+      <ul id="cartItems"></ul>
+      <p class="cart-total">
+        <span>Subtotal: $</span><span id="cartTotal">0.00</span>
+      </p>
+      <button
+        id="checkout-btn"
+        onclick="goToCheckout()"
+        disabled
+        style="opacity: 0.5; cursor: not-allowed"
+      >
+        Proceed to Checkout
+      </button>
+      <img src="assets/logo.png" alt="Logo" class="cart-logo" />
+    </div>
+
+    <!-- Info Overlay -->
+    <div id="infoOverlay" class="info-overlay" onclick="closeInfo()">
+      <div class="info-content" onclick="event.stopPropagation()">
+        <div class="info-image">
+          <img id="infoImg" src="" alt="Product" />
+        </div>
+        <div class="info-text">
+          <h2 id="infoName"></h2>
+          <p id="infoPrice"></p>
+          <p id="infoDescription"></p>
+          <button id="infoAddToCart">ADD TO CART</button>
+        </div>
+        <button class="close-info" onclick="closeInfo()">×</button>
+      </div>
+    </div>
+
+    <!-- START OF FOOTER-->
+    <footer
+      aria-label="Site footer"
+      class="mt-16 border-t border-gray-200 bg-white/80 dark:bg-slate-900/80 dark:border-slate-700"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm"
+      >
+        <div class="flex items-center gap-3">
+          <img
+            src="assets/Logo.png"
+            alt="Flavored Watr Inc. logo"
+            class="w-8 h-8 object-contain"
+          />
+          <p class="text-gray-600 dark:text-slate-300">
+            © 2025 Flavoured Watr Inc. · Refreshment reimagined.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-4 text-gray-600 dark:text-slate-300">
+          <a
+            href="index.html"
+            class="hover:text-emerald-700 dark:hover:text-emerald-300"
+          >
+            Home
+          </a>
+          <a
+            href="shop.html"
+            class="hover:text-emerald-700 dark:hover:text-emerald-300"
+          >
+            Shop
+          </a>
+          <a
+            href="about.html"
+            class="hover:text-emerald-700 dark:hover:text-emerald-300"
+          >
+            About
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="scripts/scripts.js"></script>
+</html>
