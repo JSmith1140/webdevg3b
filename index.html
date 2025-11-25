@@ -189,73 +189,73 @@
         </nav>
     </div>
 </header>
-    <main class="grow pt-16">
-            <div class=pl-scrollbar>
-                <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
-                    <div class=lg:pt-12>
-                        <div class="flex flex-col md:flex-row bg-secondary-bg rounded">
-                            <div class="md:w-1/4 lg:w-1/5 border-e">
-                                <div class="sticky top-16 pt-6">
-                                    <div id=sidebar-toc class="hidden md:block overflow-y-auto mx-6 md:mx-0 pe-6 pt-2 md:max-h-doc-sidebar bg-primary-bg md:bg-transparent">
-                                        <ul class=ps-6>
-                                    </div>
-                                </div>
-                                <div class="flex justify-center mb-0">
+    <main class="grow pt-16 px-2 sm:px-4 md:px-8">
+        <div class="pl-scrollbar">
+            <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
+                <div class="lg:pt-12">
+                    <div class="flex flex-col md:flex-row bg-secondary-bg rounded">
+                        <div class="md:w-1/4 lg:w-1/5 border-e">
+                            <div class="sticky top-16 pt-6">
+                                <div id="sidebar-toc" class="hidden md:block overflow-y-auto mx-6 md:mx-0 pe-6 pt-2 md:max-h-doc-sidebar bg-primary-bg md:bg-transparent">
+                                    <ul class="ps-6">
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="w-full md:w-3/4 lg:w-4/5 mb-16 pt-2 md:pt-8">
-                                <div class=flex>
-                                    <div class="w-full lg:w-3/4 p-6">
-                                        <article class="prose max-w-none">
-                                            <h1 class="text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6">FLAVOURED WATR</h1>
-                                            <div class="hero-image-shell flex justify-center items-center">
-                                                <img id="zoomable-image"
-                                                    src="assets/FlavourWatrInc.png"
-                                                    alt="Flavoured Water Inc. Logo"
-                                                    data-base-width="600"
-                                                    data-max-width="800"
-                                                    data-step="400"
-                                                    class="hero-logo w-full max-w-[600px] sm:max-w-[700px] lg:max-w-[800px] h-auto mx-auto -mt-6"
-                                                />
-                                            </div>
-                                            <div id="zoom-modal" class="zoom-modal fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden">
-                                                <div class="zoom-modal__content bg-white rounded-lg p-6 shadow-lg flex flex-col items-center">
-                                                    <img id="zoom-modal-img" src="assets/FlavourWatrInc.png" alt="Flavoured Water Inc. Logo" class="zoom-modal__img w-full max-w-[800px] h-auto mb-4" />
-                                                    <div class="zoom-modal__controls flex gap-4">
-                                                        <button id="zoom-in-btn" class="zoom-btn px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 text-xl font-bold text-black">+</button>
-                                                        <button id="zoom-out-btn" class="zoom-btn px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 text-xl font-bold text-black">−</button>
-                                                        <button id="zoom-reset-btn" class="zoom-btn zoom-btn--reset px-4 py-2 bg-emerald-600 rounded hover:bg-emerald-700 text-white font-semibold">Reset</button>
-                                                    </div>
+                            <div class="flex justify-center mb-0">
+                            </div>
+                        </div>
+                        <div class="w-full md:w-3/4 lg:w-4/5 mb-16 pt-2 md:pt-8">
+                            <div class="flex">
+                                <div class="w-full lg:w-3/4 p-4 sm:p-6">
+                                    <article class="prose max-w-none">
+                                        <h1 class="text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6">FLAVOURED WATR</h1>
+                                        <div class="hero-image-shell flex justify-center items-center">
+                                            <img id="zoomable-image"
+                                                src="assets/FlavourWatrInc.png"
+                                                alt="Flavoured Water Inc. Logo"
+                                                data-base-width="600"
+                                                data-max-width="800"
+                                                data-step="400"
+                                                class="hero-logo w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-[800px] h-auto mx-auto -mt-6"
+                                            />
+                                        </div>
+                                        <div id="zoom-modal" class="zoom-modal fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden">
+                                            <div class="zoom-modal__content bg-white rounded-lg p-4 sm:p-6 shadow-lg flex flex-col items-center max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl w-full">
+                                                <img id="zoom-modal-img" src="assets/FlavourWatrInc.png" alt="Flavoured Water Inc. Logo" class="zoom-modal__img w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-[800px] h-auto mb-4" />
+                                                <div class="zoom-modal__controls flex gap-2 sm:gap-4 flex-wrap justify-center">
+                                                    <button id="zoom-in-btn" class="zoom-btn px-3 sm:px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 text-xl font-bold text-black">+</button>
+                                                    <button id="zoom-out-btn" class="zoom-btn px-3 sm:px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 text-xl font-bold text-black">−</button>
+                                                    <button id="zoom-reset-btn" class="zoom-btn zoom-btn--reset px-3 sm:px-4 py-2 bg-emerald-600 rounded hover:bg-emerald-700 text-white font-semibold">Reset</button>
                                                 </div>
                                             </div>
-                                            <h2 class="font-size: 3rem; text-center text-xl sm:text-2xl font-bold mt-6 mb-6 mr-4 ml-4">
-                                                A feature-rich and highly customizable water
-                                            </h2>
-                                            <h2 id="try-Flavoured-Water" class="section-title text-4xl font-extrabold mt-8 mb-4">
-                                                Try Flavoured Water
-                                            </h2>
-                                            <div class="bg-gradient-to-br from-indigo-100 to-gray-50 rounded-3xl p-8 shadow-md mb-6">
-                                                <ul class="section-list space-y-2">
-                                                    <li class="text-gray-900">Flavoured Water is a feature-rich, highly customizable beverage designed for every taste.</li>
-                                                    <li class="text-gray-900">Choose from a variety of natural flavors and create your own perfect blend.</li>
-                                                    <li class="text-gray-900">Our water is crafted for health, hydration, and refreshment—no artificial additives.</li>
-                                                    <li class="text-gray-900">Explore our Getting Started guide to discover your favorite combinations and recipes.</li>
-                                                    <li class="text-gray-900">Join our community, share your custom blends, and help us improve Flavoured Water for everyone!</li>
-                                                </ul>
-                                            </div>
-                                            <h2 id="view-document" class="section-title text-center text-4xl font-extrabold mt-8 mb-4">View Document</h2>
-                                            <div class="bg-gradient-to-br from-indigo-100 to-gray-50 rounded-3xl p-8 shadow-md mb-6">
-                                                <ul class="section-list space-y-2">
-                                                    <li class="text-gray-900"><strong>Getting Started:</strong> In Getting Started you will learn how to quickly enjoy Flavoured Water and explore its features.</li>
-                                                    <li class="text-gray-900"><strong>Homepage Configuration:</strong> After Getting Started, learn how to customize your Flavoured Water experience and personalize your homepage.</li>
-                                                    <li class="text-gray-900"><strong>Content Management:</strong> Once your homepage is set up, discover how to manage your favorite blends and organize your water choices.</li>
-                                                    <li class="text-gray-900"><strong>Customize Flavoured Water:</strong> After mastering content management, explore customization options to tailor Flavoured Water to your taste and preferences.</li>
-                                                    <li class="text-gray-900"><strong>Multilingual Mode:</strong> In addition to content management and customization, Flavoured Water supports multiple languages. Learn how to enjoy Flavoured Water in your preferred language.</li>
-                                                    <li class="text-gray-900"><strong>Update Flavoured Water:</strong> Discover different ways to update your Flavoured Water experience, including new flavors, seasonal blends, and feature improvements.</li>
-                                                </ul>
-                                            </div>
-                                        </article>
-                                    </div>
+                                        </div>
+                                        <h2 class="text-center text-xl sm:text-2xl font-bold mt-6 mb-6 mr-2 ml-2 sm:mr-4 sm:ml-4">
+                                            A feature-rich and highly customizable water
+                                        </h2>
+                                        <h2 id="try-Flavoured-Water" class="section-title text-4xl font-extrabold mt-8 mb-4">
+                                            Try Flavoured Water
+                                        </h2>
+                                        <div class="bg-gradient-to-br from-indigo-100 to-gray-50 rounded-3xl p-4 sm:p-8 shadow-md mb-6">
+                                            <ul class="section-list space-y-2">
+                                                <li class="text-gray-900">Flavoured Water is a feature-rich, highly customizable beverage designed for every taste.</li>
+                                                <li class="text-gray-900">Choose from a variety of natural flavors and create your own perfect blend.</li>
+                                                <li class="text-gray-900">Our water is crafted for health, hydration, and refreshment—no artificial additives.</li>
+                                                <li class="text-gray-900">Explore our Getting Started guide to discover your favorite combinations and recipes.</li>
+                                                <li class="text-gray-900">Join our community, share your custom blends, and help us improve Flavoured Water for everyone!</li>
+                                            </ul>
+                                        </div>
+                                        <h2 id="view-document" class="section-title text-center text-4xl font-extrabold mt-8 mb-4">View Document</h2>
+                                        <div class="bg-gradient-to-br from-indigo-100 to-gray-50 rounded-3xl p-4 sm:p-8 shadow-md mb-6">
+                                            <ul class="section-list space-y-2">
+                                                <li class="text-gray-900"><strong>Getting Started:</strong> In Getting Started you will learn how to quickly enjoy Flavoured Water and explore its features.</li>
+                                                <li class="text-gray-900"><strong>Homepage Configuration:</strong> After Getting Started, learn how to customize your Flavoured Water experience and personalize your homepage.</li>
+                                                <li class="text-gray-900"><strong>Content Management:</strong> Once your homepage is set up, discover how to manage your favorite blends and organize your water choices.</li>
+                                                <li class="text-gray-900"><strong>Customize Flavoured Water:</strong> After mastering content management, explore customization options to tailor Flavoured Water to your taste and preferences.</li>
+                                                <li class="text-gray-900"><strong>Multilingual Mode:</strong> In addition to content management and customization, Flavoured Water supports multiple languages. Learn how to enjoy Flavoured Water in your preferred language.</li>
+                                                <li class="text-gray-900"><strong>Update Flavoured Water:</strong> Discover different ways to update your Flavoured Water experience, including new flavors, seasonal blends, and feature improvements.</li>
+                                            </ul>
+                                        </div>
+                                    </article>
                                 </div>
                             </div>
                         </div>
