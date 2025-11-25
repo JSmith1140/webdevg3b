@@ -19,3 +19,5 @@ Kaden - About us,
 Emily - NavBar/Footer (Code written in about.html for group members to copy)
 Jacob - Shop Page
 Michael - Home
+
+We chose the name Flavoured Watr Inc. because it's simple and too the point, you know what you're getting with that name and it follows modern trends of simplicity. We chose the idea of a Flavored Water Company because we wanted to "make" a healthy option for people who like flavored drinks like juices or soda. This idea is special because its a small market that only a few Water companys have products of.
