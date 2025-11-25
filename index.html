@@ -3,74 +3,106 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>Flavoured Water | WANG Chucheng</title>
-        <meta name="description" content="Flavoured Water is a feature-rich and highly customizable Flavoured Water. Using Eureka allows you to customize and deploy your website quickly and easily.">
-        <meta property="og:title" content="Flavoured Water | WANG Chucheng">
-        <meta property="og:type" content="website">
-        <meta property="og:image" content="https://www.wangchucheng.com/images/icon.png">
-        <meta property="og:url" content="https://www.wangchucheng.com/en/docs/hugo-eureka/">
-        <meta property="og:locale" content="en">
-        <meta property="og:locale:alternate" content="zh">
-        <meta property="og:updated_time" content="2020-10-19T22:47:34+08:00">
-        <meta property="article:section" content="docs">
-        <link rel="stylesheet" href="https://www.wangchucheng.com/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css">
-        <link rel="stylesheet" href="https://www.wangchucheng.com/css/syntax.min.c23d69753bf079076c08ebeaaa906d250b9450f9e52fd100ae5db39786ccd5251257a7718fd7d40bceb36296346bbf22.css" media="print" onload="this.media='all',this.onload=null">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" as="style" onload="this.onload=null,this.rel='stylesheet'">
-        <link rel="stylesheet" href="styles/styles.css">
-        <link rel="icon" type="image/png" sizes="32x32" href="https://www.wangchucheng.com/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_32x32_fill_box_center_3.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="https://www.wangchucheng.com/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_3.png">
-        <link rel="alternate" type="application/rss+xml" href="https://www.wangchucheng.com/en/docs/hugo-eureka/index.xml" title="WANG Chucheng">
-        <script defer src="https://www.wangchucheng.com/js/eureka.min.c9397561036ecdb150468028e7807081e0823ad4b7207798ac3c0cdf9742e4300265511b6b457026c9a0e7b663e44683.js"></script>
-        <script defer type="text/javascript" src="https://www.wangchucheng.com/js/fontawesome.min.d703bc67c4bacf94e9dfa57332b8ead8aa876aebec9b2248aa52845af61805e5a49c21522677f76e67290391f7c95bb0.js"></script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-726CS2F8RZ"></script>
-        <script async src="https://cdn.jsdelivr.net/npm/github-buttons@2.22.0/dist/buttons.min.js"></script>
-        <script type="application/ld+json"></script>
-        <script type="application/ld+json"></script>
-        <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+        <title>Flavoured Water</title>
+            <!-- Tailwind Play CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- FOR DARK MODE // HEADER-->
+        <script>
+        tailwind.config = {
+            darkMode: "class",
+        };
+        </script>
+
+        <!-- Custom styles -->
+        <link rel="stylesheet" href="styles/styles.css" />
+
+        <!-- HEADER-->
     </head>
-    <body class="flex min-h-screen flex-col">
-        <header class="min-h-24 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-lg" style="padding:40px 0 32px 0;">
-            <div class="mx-auto w-full max-w-screen-xl">
-            <nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
-                    <button id=navbar-btn class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                    <div id=target class="hidden block md:flex md:grow md:justify-center md:items-center w-full md:w-auto text-primary-text z-20">
-                        <div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0 justify-center" style="justify-content:center;">
-                            <a href=about.html class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent me-4" style="font-size:1.5rem; padding:0.75rem 2rem;">About Me</a>
-                            <a href=/en/docs/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 selected-menu-item me-4" style="font-size:1.5rem; padding:0.75rem 2rem;">Docs</a>
-                        </div>
-                        <div class=flex>
-                            <div class="relative pt-4 md:pt-0">
-                                <div class="cursor-pointer hover:text-eureka" id=lightDarkMode>
-                                    <i class="fas fa-adjust" style="font-size:1.8rem;"></i>
-                                </div>
-                                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id=is-open></div>
-                                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40" id=lightDarkOptions>
-                                    <span class="px-6 py-3 hover:text-eureka" name=Light style="font-size:1.3rem;">Light</span>
-                                    <span class="px-6 py-3 hover:text-eureka" name=Dark style="font-size:1.3rem;">Dark</span>
-                                    <span class="px-6 py-3 hover:text-eureka" name=Auto style="font-size:1.3rem;">Auto</span>
-                                </div>
-                            </div>
-                            <div class="relative pt-4 ps-4 md:pt-0">
-                                <div class="cursor-pointer hover:text-eureka" id=languageMode>
-                                    <i class="fas fa-globe"></i>
-                                    <span class=ps-1 style="font-size:1.3rem;">English</span>
-                                </div>
-                                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id=is-open-lang></div>
-                                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40" id=languageOptions>
-                                    <a class="px-6 py-3 hover:text-eureka" href=https://www.wangchucheng.com/en/docs/hugo-eureka/ style="font-size:1.3rem;">English</a>
-                                    <a class="px-6 py-3 hover:text-eureka" href=https://www.wangchucheng.com/zh/docs/hugo-eureka/ style="font-size:1.3rem;">简体中文</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id=is-open-mobile></div>
-                </nav>
+    <body class="bg-gray-50 text-gray-800 dark:bg-slate-900 dark:text-slate-100">
+        <header
+        aria-label="Site header"
+        class="bg-white/80 backdrop-blur border-b border-gray-200 dark:bg-slate-900/80 dark:border-slate-700"
+        >
+        <nav
+            class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between"
+        >
+            <a href="index.html" class="flex items-center gap-2">
+            <img
+                src="assets/Logo.png"
+                alt="Flavored Watr Inc. logo"
+                class="w-9 h-9 object-contain"
+            />
+            <span
+                class="font-semibold tracking-wide text-gray-800 dark:text-slate-100"
+            >
+                FLAVOURED WATR INC.
+            </span>
+            </a>
+
+            <div class="flex items-center gap-6">
+            <nav class="hidden sm:flex items-center gap-4 text-sm font-medium">
+                <a
+                href="index.html"
+                class="text-gray-700 hover:text-emerald-700 dark:text-slate-200 dark:hover:text-emerald-300"
+                >
+                Home
+                </a>
+                <a
+                href="about.html"
+                class="text-emerald-700 dark:text-emerald-300 font-semibold"
+                >
+                About
+                </a>
+                <a
+                href="shop.html"
+                class="text-gray-700 hover:text-emerald-700 dark:text-slate-200 dark:hover:text-emerald-300"
+                >
+                Shop
+                </a>
+            </nav>
+
+            <div class="relative">
+                <button
+                id="themeToggle"
+                type="button"
+                class="inline-flex items-center gap-1 px-3 py-1.5 text-sm font-medium rounded-full border border-gray-300 bg-white text-gray-700 shadow-sm hover:bg-gray-100 dark:bg-slate-800 dark:border-slate-600 dark:text-slate-100 dark:hover:bg-slate-700"
+                >
+                Theme
+                <span aria-hidden="true">▾</span>
+                </button>
+
+                <div
+                id="themeDropdown"
+                class="absolute right-0 mt-2 w-40 bg-white border border-gray-200 rounded-lg shadow-lg py-1 text-sm hidden dark:bg-slate-800 dark:border-slate-700"
+                >
+                <button
+                    type="button"
+                    data-theme="light"
+                    class="w-full text-left px-3 py-2 hover:bg-gray-100 dark:hover:bg-slate-700 text-gray-800 dark:text-slate-100"
+                >
+                    Light mode
+                </button>
+                <button
+                    type="button"
+                    data-theme="dark"
+                    class="w-full text-left px-3 py-2 hover:bg-gray-100 dark:hover:bg-slate-700 text-gray-800 dark:text-slate-100"
+                >
+                    Dark mode
+                </button>
+                <button
+                    type="button"
+                    data-theme="system"
+                    class="w-full text-left px-3 py-2 hover:bg-gray-100 dark:hover:bg-slate-700 text-gray-800 dark:text-slate-100"
+                >
+                    System default
+                </button>
+                </div>
             </div>
-    </header>
+            </div>
+        </nav>
+        </header>
+
     <main class="grow pt-16">
             <div class=pl-scrollbar>
                 <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
@@ -87,49 +119,52 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="w-full md:w-3/4 lg:w-4/5 pb-8 pt-2 md:pt-8">
+                            <div class="w-full md:w-3/4 lg:w-4/5 mb-16 pt-2 md:pt-8">
                                 <div class=flex>
-                                    <div class="w-full lg:w-3/4 px-6">
+                                    <div class="w-full lg:w-3/4 p-6">
                                         <article class=prose>
-                                            <div class="hero-card">
-                                                <h1 class="hero-title">FLAVOURED WATR</h1>
+                                                <h1 style="text-align: center; font-size: 4.5rem;">FLAVOURED WATR</h1>
                                                 <div class="hero-controls">
                                                     <button id="increase-size-btn" class="btn-primary">Make this bigger</button>
-                                                    <button id="reset-size-btn" class="btn-secondary hidden">Reset size</button>
-                                                    <span id="size-indicator" class="size-indicator">600px wide</span>
+                                                    <button id="reset-size-btn" class="btn-secondary hidden" style="font-size: 3rem;">Reset size</button>
+                                                    <span id="size-indicator" class="size-indicator" style="color: white; font-size: 1.5rem;">600px wide</span>
                                                 </div>
                                                 <div class="hero-image-shell">
-                                                        <img id="zoomable-image" src="assets/FlavourWatrInc.png" alt="Flavoured Water Inc. Logo" data-base-width="600" data-max-width="1200" data-step="120" class="hero-logo" />
+                                                        <img id="zoomable-image" src="assets/FlavourWatrInc.png" alt="Flavoured Water Inc. Logo" data-base-width="600" data-max-width="800" data-step="100" class="hero-logo" style="width:600px;max-width:100%;height:auto;display:block;margin:auto;margin-top:-25px;" />
                                                 </div>
                                                     <div id="zoom-modal" class="zoom-modal">
                                                         <div class="zoom-modal__content">
                                                             <img id="zoom-modal-img" src="assets/FlavourWatrInc.png" alt="Flavoured Water Inc. Logo" class="zoom-modal__img" />
                                                             <div class="zoom-modal__controls">
-                                                                <button id="zoom-in-btn" class="zoom-btn">+</button>
-                                                                <button id="zoom-out-btn" class="zoom-btn">−</button>
-                                                                <button id="zoom-reset-btn" class="zoom-btn zoom-btn--reset">Reset</button>
+                                                                <button id="zoom-in-btn" class="zoom-btn" style="color:#000;">+</button>
+                                                                <button id="zoom-out-btn" class="zoom-btn" style="color:#000;">−</button>
+                                                                <button id="zoom-reset-btn" class="zoom-btn zoom-btn--reset" style="color:#000;">Reset</button>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                <h2 class="hero-tagline">A feature-rich and highly customizable water</h2>
-                                            </div>
+                                                    <h2 class="hero-tagline" style="text-align:left; font-size:1.8rem; font-weight:700; margin-top:1.5rem; margin-right: 1.5rem; margin-bottom:1.5rem; margin-left:4rem;">A feature-rich and highly customizable water</h2>
                                             <h2 id=try-Flavoured-Water class="section-title">Try Flavoured Water</h2>
                                             <ul class="section-list">
-                                                <li>Flavoured Water is a feature-rich, highly customizable beverage designed for every taste.</li>
-                                                <li>Choose from a variety of natural flavors and create your own perfect blend.</li>
-                                                <li>Our water is crafted for health, hydration, and refreshment—no artificial additives.</li>
-                                                <li>Explore our Getting Started guide to discover your favorite combinations and recipes.</li>
-                                                <li>Join our community, share your custom blends, and help us improve Flavoured Water for everyone!</li>
+                                                <div style="background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%); border-radius: 24px; padding: 32px 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.07); margin-bottom: 24px;">
+                                                    <ul class="section-list" style="margin-bottom:0;">
+                                                        <li style="color:#000;">Flavoured Water is a feature-rich, highly customizable beverage designed for every taste.</li>
+                                                        <li style="color:#000;">Choose from a variety of natural flavors and create your own perfect blend.</li>
+                                                        <li style="color:#000;">Our water is crafted for health, hydration, and refreshment—no artificial additives.</li>
+                                                        <li style="color:#000;">Explore our Getting Started guide to discover your favorite combinations and recipes.</li>
+                                                        <li style="color:#000;">Join our community, share your custom blends, and help us improve Flavoured Water for everyone!</li>
+                                                    </ul>
+                                                </div>
                                             </ul>
                                             <h2 id=view-document class="section-title text-center">View Document</h2>
-                                            <ul class="section-list section-list--dense">
-                                                <li><strong>Getting Started:</strong> In Getting Started you will learn how to quickly enjoy Flavoured Water and explore its features.</li>
-                                                <li><strong>Homepage Configuration:</strong> After Getting Started, learn how to customize your Flavoured Water experience and personalize your homepage.</li>
-                                                <li><strong>Content Management:</strong> Once your homepage is set up, discover how to manage your favorite blends and organize your water choices.</li>
-                                                <li><strong>Customize Flavoured Water:</strong> After mastering content management, explore customization options to tailor Flavoured Water to your taste and preferences.</li>
-                                                <li><strong>Multilingual Mode:</strong> In addition to content management and customization, Flavoured Water supports multiple languages. Learn how to enjoy Flavoured Water in your preferred language.</li>
-                                                <li><strong>Update Flavoured Water:</strong> Discover different ways to update your Flavoured Water experience, including new flavors, seasonal blends, and feature improvements.</li>
-                                            </ul>
+                                                <div style="background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%); border-radius: 24px; padding: 32px 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.07); margin-bottom: 24px;">
+                                                    <ul class="section-list" style="margin-bottom:0;">
+                                                    <li style="color:#000;"><strong>Getting Started:</strong> In Getting Started you will learn how to quickly enjoy Flavoured Water and explore its features.</li>
+                                                    <li style="color:#000;"><strong>Homepage Configuration:</strong> After Getting Started, learn how to customize your Flavoured Water experience and personalize your homepage.</li>
+                                                    <li style="color:#000;"><strong>Content Management:</strong> Once your homepage is set up, discover how to manage your favorite blends and organize your water choices.</li>
+                                                    <li style="color:#000;"><strong>Customize Flavoured Water:</strong> After mastering content management, explore customization options to tailor Flavoured Water to your taste and preferences.</li>
+                                                    <li style="color:#000;"><strong>Multilingual Mode:</strong> In addition to content management and customization, Flavoured Water supports multiple languages. Learn how to enjoy Flavoured Water in your preferred language.</li>
+                                                    <li style="color:#000;"><strong>Update Flavoured Water:</strong> Discover different ways to update your Flavoured Water experience, including new flavors, seasonal blends, and feature improvements.</li>
+                                                </ul>
                                         <div class="flex md:justify-end my-4">
                                             <a href=https://github.com/wangchucheng/hugo-eureka-docs/blob/master/en/_index.md title="Edit this page">
                                                 <i class="fas fa-edit me-1"></i>
@@ -142,19 +177,48 @@
                         </div>
                     </div>
                 </div>
-                </div>
             </div>
-        </main>
-        <footer class="pl-scrollbar">
-            <div class="mx-auto w-full max-w-screen-xl">
-                <div class="text-center p-6 pin-b">
-                    <p class="text-sm text-tertiary-text">
-                        &copy;2022 <a href="https://www.wangchucheng.com/">WANG Chucheng</a>
-                        &#183;Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a>
-                        theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a>
-                    </p>
-                </div>
+        </div>
+    </main>
+    <footer
+        aria-label="Site footer"
+        class="mt-16 border-t border-gray-200 bg-white/80 dark:bg-slate-900/80 dark:border-slate-700"
+        >
+        <div
+            class="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm"
+        >
+            <div class="flex items-center gap-3">
+            <img
+                src="assets/Logo.png"
+                alt="Flavored Watr Inc. logo"
+                class="w-8 h-8 object-contain"
+            />
+            <p class="text-gray-600 dark:text-slate-300">
+                © 2025 Flavoured Watr Inc. · Refreshment reimagined.
+            </p>
             </div>
+
+            <div class="flex items-center gap-4 text-gray-600 dark:text-slate-300">
+            <a
+                href="index.html"
+                class="hover:text-emerald-700 dark:hover:text-emerald-300"
+            >
+                Home
+            </a>
+            <a
+                href="shop.html"
+                class="hover:text-emerald-700 dark:hover:text-emerald-300"
+            >
+                Shop
+            </a>
+            <a
+                href="about.html"
+                class="hover:text-emerald-700 dark:hover:text-emerald-300"
+            >
+                About
+            </a>
+            </div>
+        </div>
         </footer>
         <script defer src="scripts/scripts.js"></script>
         <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"062c7455e19646539b95e8d6a893da94","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
